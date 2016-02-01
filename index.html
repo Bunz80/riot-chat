@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Riot Chat</title>
+   </head>
+   <body>
+      <app></app>
+      <!-- riot.js part -->
+      <script src="//cdn.jsdelivr.net/riot/2.3/riot.min.js"></script>
+      <script src="./js/chat.js"></script>
+      <script>
+      riot.mount('app',{
+        title: 'Riot　chat'
+      })
+      </script>
+
+      <!-- firebase part-->
+      <script src="https://cdn.firebase.com/js/client/2.1.1/firebase.js"></script>
+      <script type="text/javascript">
+         var data_store = new Firebase("https://sweltering-inferno-2148.firebaseio.com");
+      </script>
+   </body>
+</html>
