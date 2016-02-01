@@ -1,6 +1,6 @@
 <app>
    <h3>{ opts.title }</h3>
-   <form onSubmit={ doCheck } >
+   <form onSubmit={ send } >
       <p>Please enter the text box</p>
       <input type="text" onkeyup={ input }>
       <input disabled={ !text } type="submit" value="Send Message">
@@ -9,6 +9,7 @@
       <li each="{ opts.items }"><label class="{ key }">{ value }</label></li>
    </ul>
 
+
    <script>
       this.text = "";
 
@@ -16,8 +17,10 @@
          this.text = e.target.value;
       }
 
-      doCheck() {
-         // process of submit
+      send(e) {
+         opts.data_store.child('messages').push({
+            'message': e.target.value,
+         });
       }
    </script>
 </app>
