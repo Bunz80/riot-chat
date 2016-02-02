@@ -2,3 +2,6 @@ This is a chat app using [Riot.js](http://riotjs.com/) and [Firebase](https://ww
 [Demo site](http://www34.atpages.jp/clown3130/riot-chat/)  
 
 This app is due to the use of pre-compilation, you don't need to compile.
+
+
+Welcomes your comments and code review at any time !
