@@ -2,7 +2,6 @@ riot.tag2('app', '<h3>{opts.title}</h3> <form onsubmit="{send}"> <p>Please enter
       this.text = "";
       this.disabled = true;
       this.items = opts.items;
-      console.dir(opts);
 
       this.input = function(e) {
          this.text = e.target.value;
