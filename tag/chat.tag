@@ -13,15 +13,7 @@
    <script>
       this.text = "";
       this.disabled = true;
-      items = [];
-
-      // get messages
-      opts.data_store.child('messages').on('child_added', function(data_snapshot) {
-         data_snapshot.forEach(function(obj) {
-            items.push({'message': obj.val()});
-         });
-         console.dir(this);
-      });
+      this.items = opts.items;
 
       // input text-box check
       input(e) {

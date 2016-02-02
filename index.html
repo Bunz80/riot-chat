@@ -12,11 +12,24 @@
       <!-- firebase part-->
       <script src="https://cdn.firebase.com/js/client/2.1.1/firebase.js"></script>
       <script>
+      var messages = [];
       var obj_fire = new Firebase("https://sweltering-inferno-2148.firebaseio.com");
-      riot.mount('app',{
-        title: 'Riot　chat',
-        data_store: obj_fire
+
+      // get messages
+      obj_fire.child('messages').on('child_added', function(data_snapshot) {
+         data_snapshot.forEach(function(obj) {
+            messages.push({'message': obj.val()});
+         });
       });
+
+      // delayed process for message requesting
+      delay = window.setTimeout(function() {
+        riot.mount('app',{
+          title: 'Riot　chat',
+          items: messages,
+          data_store: obj_fire
+        });
+      }, 1000);
       </script>
 
 
