@@ -1,8 +1,8 @@
 <app>
    <h3>{ opts.title }</h3>
-   <form onSubmit={ send } >
+   <form name="form_message" onSubmit={ send } >
       <p>Please enter the text box</p>
-      <input type="text" onkeyup={ input }>
+      <input type="text" name="input_message" onkeyup={ input }>
       <input disabled={ !text } type="submit" value="Send Message">
    </form>
    <ul>
@@ -23,7 +23,9 @@
       // add message
       send(e) {
          opts.data_store.child('messages').push({'messages': this.text});
+
          this.text = '';
+         document.form_message.input_message.value = '';
       }
    </script>
 </app>

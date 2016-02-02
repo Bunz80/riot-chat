@@ -20,6 +20,7 @@
          data_snapshot.forEach(function(obj) {
             messages.push({'message': obj.val()});
          });
+         riot.update();
       });
 
       // delayed process for message requesting
