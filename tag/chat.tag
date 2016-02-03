@@ -9,11 +9,11 @@
          font-size: 18px;
       }
       .footer {
-         position: absolute;
          bottom: 0;
          width: 100%;
          height: 60px;
          background-color: #f5f5f5;
+         display: block;
       }
       .text-muted {
          margin: 20px 0;
@@ -43,7 +43,6 @@
          <p class="text-muted">Copyright © 2016 k-kuwahara All Rights Reserved.</p>
       </div>
    </footer>
-
 
    <script>
       this.text = "";
