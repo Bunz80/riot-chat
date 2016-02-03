@@ -1,23 +1,7 @@
 <app>
    <style>
-      .container {
-         width: auto;
-         max-width: 680px;
-         padding: 0 15px;
-      }
       li {
          font-size: 18px;
-      }
-      .footer {
-         bottom: 0;
-         width: 100%;
-         height: 60px;
-         background-color: #f5f5f5;
-         display: block;
-      }
-      .text-muted {
-         margin: 20px 0;
-         color: #777;
       }
 
    </style>
