@@ -3,7 +3,6 @@
       li {
          font-size: 18px;
       }
-
    </style>
    <div class="container">
       <div class="page-header">
@@ -19,7 +18,7 @@
          </form>
       </div>
       <ul>
-         <li each="{ items }"><label>{ message }</label></li>
+         <li each="{ items }">{ message }</li>
       </ul>
    </div>
    <footer class="footer">
